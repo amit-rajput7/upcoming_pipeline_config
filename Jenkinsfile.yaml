@@ -5,6 +5,8 @@ pipeline:
     - stage: "Log Jenkins Maven Docker Java and Git versions"
       steps:
         - sh "git --version"
+        - env.JAVA_HOME="${tool 'java-11-openjdk-amd64'}"
+        - env.PATH="${env.JAVA_HOME}/bin:${env.PATH}"
     - stage: "Jenkins YAML Maven Build"
       steps:
         - git "https://github.com/amit-rajput7/upcoming.git"
