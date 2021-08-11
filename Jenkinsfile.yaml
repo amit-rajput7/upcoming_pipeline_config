@@ -5,8 +5,6 @@ pipeline:
     - stage: "Log Jenkins Maven Docker Java and Git versions"
       steps:
         - sh "git --version"
-        - sh "java --version"
-        - sh "mvn  --version"
     - stage: "Jenkins YAML Maven Build"
       steps:
         - git "https://github.com/amit-rajput7/upcoming.git"
