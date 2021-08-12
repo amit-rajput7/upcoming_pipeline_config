@@ -8,7 +8,7 @@ pipeline:
     - stage: "Jenkins YAML Maven Build"
       steps:
         - git "https://github.com/amit-rajput7/upcoming.git"
-        - sh  'mvn -f /home/amit/git/upcoming/myapp/pom.xml clean install'
+        - sh  'mvn -f /var/lib/jenkins/workspace/my-app-yml/pom.xml clean install'
     - stage: "Final Jenkins YAML Pipeline Stage"
       steps:
         - sh "echo 'Jenkins YAML Pipeline Complete'"
